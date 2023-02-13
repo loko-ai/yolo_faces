@@ -1,0 +1,746 @@
+{
+  "name": "yolo_faces",
+  "id": "yolo_faces",
+  "description": "",
+  "created_on": "13/02/2023, 09:10:27",
+  "last_modify": "13/02/2023, 13:49:39",
+  "graphs": {
+    "main": {
+      "nodes": [
+        {
+          "id": "ff06e3ff-8e61-4815-b5d0-6b27e008ead1",
+          "position": {
+            "x": 830,
+            "y": 98
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Faces",
+            "events": null,
+            "description": "posso scrivere in markup qualsiasi cosa in doc",
+            "inputs": [
+              {
+                "id": "image",
+                "label": "image",
+                "service": "",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Custom",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "threshold",
+                  "type": "number",
+                  "label": "threshold",
+                  "helper": "",
+                  "group": "",
+                  "value": "0",
+                  "description": "",
+                  "validation": null
+                },
+                {
+                  "name": "blur",
+                  "type": "boolean",
+                  "label": "blur",
+                  "helper": "",
+                  "group": "",
+                  "value": false,
+                  "description": "Whether objects have to be blurred",
+                  "validation": null
+                },
+                {
+                  "name": "file_path",
+                  "type": "dynamic",
+                  "label": "file_path",
+                  "helper": "",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": null,
+                  "parent": "blur",
+                  "condition": "{parent}",
+                  "dynamicType": "directories",
+                  "options": null,
+                  "fields": null,
+                  "url": null
+                }
+              ],
+              "click": null,
+              "icon": "RiEmotionHappyLine",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "threshold": "0",
+                "blur": true,
+                "file_path": {
+                  "name": "yolo_faces_results",
+                  "path": "data/data/yolo_faces_results",
+                  "parent": "data/data",
+                  "isDir": true,
+                  "hidden": false
+                }
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 830,
+            "y": 98
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "27082450-f6a6-49d8-b6b6-04e40b7a90db",
+          "position": {
+            "x": 552,
+            "y": 57
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 197,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Directory Reader",
+            "events": null,
+            "description": "### Description\nThe DIRECTORY READER component allows reading files contained in a folder.\n\n### Output\nThe output provides the path to the files of interest in PosixPath format. You can set **recursive** parameter to True in order to recursively read all folders contained into the main path. Finally, the **suffixes** parameter is used to filter files by extension (e.g. csv, txt, pdf).",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Inputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "value",
+                  "type": "directories",
+                  "fragment": "files",
+                  "validation": {
+                    "required": "Select at least one directory"
+                  }
+                },
+                {
+                  "name": "recursive",
+                  "type": "boolean"
+                },
+                {
+                  "name": "suffixes",
+                  "type": "text",
+                  "group": "Advanced settings"
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end",
+                  "group": "Advanced settings"
+                }
+              ],
+              "click": "Send file",
+              "icon": "RiFolder3Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "recursive": false,
+                "suffixes": "",
+                "propagate": true,
+                "value": {
+                  "name": "data",
+                  "path": "data/projects/yolo_faces/data",
+                  "parent": "data/projects/yolo_faces",
+                  "isDir": true,
+                  "hidden": false
+                }
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 552,
+            "y": 57
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "38bc4529-6e1b-49a5-9ac6-d8ac203e2308",
+          "position": {
+            "x": 444,
+            "y": 351
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Route",
+            "events": null,
+            "description": "### Description\nThe ROUTE component is used to create a web server listening on a specific address and a specific HTTP method.\n\n### Input\nThe component has no input.\n\n### Output\nIn this case there is no fixed output format.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "HTTP",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "path",
+                  "type": "path",
+                  "helper": "Insert a path without '/' at start"
+                }
+              ],
+              "click": null,
+              "icon": "RiCloudyFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "path": "detect"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 444,
+            "y": 351
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "5f272695-9286-4373-a31b-5e9d0b4c6a2d",
+          "position": {
+            "x": 669,
+            "y": 288
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "get file",
+                "debug": false,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "return data.files.get('file')"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 669,
+            "y": 288
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "7e0e554e-0ec2-48b6-95fb-47b0f270beec",
+          "position": {
+            "x": 887.5832314426385,
+            "y": 338.69790393032986
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Faces",
+            "events": null,
+            "description": "posso scrivere in markup qualsiasi cosa in doc",
+            "inputs": [
+              {
+                "id": "image",
+                "label": "image",
+                "service": "",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Custom",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "threshold",
+                  "type": "number",
+                  "label": "threshold",
+                  "helper": "",
+                  "group": "",
+                  "value": "0",
+                  "description": "",
+                  "validation": null
+                },
+                {
+                  "name": "blur",
+                  "type": "boolean",
+                  "label": "blur",
+                  "helper": "",
+                  "group": "",
+                  "value": false,
+                  "description": "Whether objects have to be blurred",
+                  "validation": null
+                },
+                {
+                  "name": "file_path",
+                  "type": "dynamic",
+                  "label": "file_path",
+                  "helper": "",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": null,
+                  "parent": "blur",
+                  "condition": "{parent}",
+                  "dynamicType": "directories",
+                  "options": null,
+                  "fields": null,
+                  "url": null
+                }
+              ],
+              "click": null,
+              "icon": "RiEmotionHappyLine",
+              "values": {
+                "threshold": "0"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 887.5832314426385,
+            "y": 338.69790393032986
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "97195a5b-58c2-48d6-b2cf-1e36dec7ad4c",
+          "position": {
+            "x": 1096.3902620144002,
+            "y": 283.5398689965942
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Grouper",
+            "events": null,
+            "description": "### Description\nThe GROUPER component is used to group the elements received in input. The items will be returned in batches with a maximum size equal to **Group size**.\n\n### Input\nIn this case there is no fixed input format.\n\n### Output\nIn output lists of elements received in input with a maximum length equal to **Group size**.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "n",
+                  "label": "Group size",
+                  "type": "number"
+                }
+              ],
+              "click": null,
+              "icon": "RiGroupFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "n": "1000"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1096.3902620144002,
+            "y": 283.5398689965942
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "1e0491e0-1a26-48b5-8344-79d53b1caf89",
+          "position": {
+            "x": 1308.5608296932958,
+            "y": 333.95663755395555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Response",
+            "events": null,
+            "description": "### Description\nThe RESPONSE component is used to set the type of response output that should be sent upon receipt of an HTTP request captured by a **Route** component.\n\n### Input\nIn this case there is no fixed input format.\n\n### Output\nThe component has no output.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [],
+            "configured": true,
+            "options": {
+              "group": "HTTP",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "options": [
+                    "html",
+                    "json"
+                  ],
+                  "label": "Response Type",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": null,
+              "icon": "RiDownloadCloud2Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "type": "json"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1308.5608296932958,
+            "y": 333.95663755395555
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [
+        {
+          "id": "reactflow__edge-27082450-f6a6-49d8-b6b6-04e40b7a90dboutput-ff06e3ff-8e61-4815-b5d0-6b27e008ead1image",
+          "source": "27082450-f6a6-49d8-b6b6-04e40b7a90db",
+          "sourceHandle": "output",
+          "target": "ff06e3ff-8e61-4815-b5d0-6b27e008ead1",
+          "targetHandle": "image",
+          "data": {
+            "startColor": "#F8637A",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-38bc4529-6e1b-49a5-9ac6-d8ac203e2308output-5f272695-9286-4373-a31b-5e9d0b4c6a2dinput",
+          "source": "38bc4529-6e1b-49a5-9ac6-d8ac203e2308",
+          "sourceHandle": "output",
+          "target": "5f272695-9286-4373-a31b-5e9d0b4c6a2d",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#56A6DC",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-5f272695-9286-4373-a31b-5e9d0b4c6a2doutput-7e0e554e-0ec2-48b6-95fb-47b0f270beecimage",
+          "source": "5f272695-9286-4373-a31b-5e9d0b4c6a2d",
+          "sourceHandle": "output",
+          "target": "7e0e554e-0ec2-48b6-95fb-47b0f270beec",
+          "targetHandle": "image",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-7e0e554e-0ec2-48b6-95fb-47b0f270beecoutput-97195a5b-58c2-48d6-b2cf-1e36dec7ad4cinput",
+          "source": "7e0e554e-0ec2-48b6-95fb-47b0f270beec",
+          "sourceHandle": "output",
+          "target": "97195a5b-58c2-48d6-b2cf-1e36dec7ad4c",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-97195a5b-58c2-48d6-b2cf-1e36dec7ad4coutput-1e0491e0-1a26-48b5-8344-79d53b1caf89input",
+          "source": "97195a5b-58c2-48d6-b2cf-1e36dec7ad4c",
+          "sourceHandle": "output",
+          "target": "1e0491e0-1a26-48b5-8344-79d53b1caf89",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#56A6DC"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        }
+      ],
+      "__class__": "Graph"
+    }
+  },
+  "open": [
+    "main"
+  ],
+  "active": "main",
+  "version": "1.0.0",
+  "__class__": "Project"
+}

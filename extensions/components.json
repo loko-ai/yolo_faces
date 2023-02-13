@@ -1,0 +1,68 @@
+[
+ {
+  "name": "Faces",
+  "description": "posso scrivere in markup qualsiasi cosa in doc",
+  "group": "Custom",
+  "icon": "RiEmotionHappyLine",
+  "click": null,
+  "events": null,
+  "configured": true,
+  "inputs": [
+   {
+    "id": "image",
+    "label": "image",
+    "service": "",
+    "to": "output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "output",
+    "label": "output"
+   }
+  ],
+  "options": {
+   "values": {
+    "threshold": "0"
+   },
+   "args": [
+    {
+     "name": "threshold",
+     "type": "number",
+     "label": "threshold",
+     "helper": "",
+     "group": "",
+     "value": "0",
+     "description": "",
+     "validation": null
+    },
+    {
+     "name": "blur",
+     "type": "boolean",
+     "label": "blur",
+     "helper": "",
+     "group": "",
+     "value": false,
+     "description": "Whether objects have to be blurred",
+     "validation": null
+    },
+    {
+     "name": "file_path",
+     "type": "dynamic",
+     "label": "file_path",
+     "helper": "",
+     "group": "",
+     "value": null,
+     "description": "",
+     "validation": null,
+     "parent": "blur",
+     "condition": "{parent}",
+     "dynamicType": "directories",
+     "options": null,
+     "fields": null,
+     "url": null
+    }
+   ]
+  }
+ }
+]

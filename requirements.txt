@@ -1,0 +1,7 @@
+loko-extensions
+loko-client
+yoloface
+ipython
+sanic
+sanic-cors
+sanic-openapi
