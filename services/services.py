@@ -8,13 +8,15 @@ from sanic_cors import CORS
 import numpy as np
 import cv2
 from loko_client.business.fs_client import FSClient
+
+from doc.doc import yolofaces_doc
 from utils.logging_utils import root_logger
 from yoloface import face_analysis
 
 gw = 'http://gateway:8080/routes/'
 fsclient = FSClient(gateway=gw)
 
-comp = Component("Faces", inputs=[Input(id="image")], description="posso scrivere in markup qualsiasi cosa in doc",
+comp = Component("Faces", inputs=[Input(id="image")], description=yolofaces_doc,
 args=[Arg(name="threshold", type='number', value='0'),
       Arg(name='blur', value=False, description='Whether objects have to be blurred', type='boolean'),
       Dynamic(name='file_path', dynamicType='directories', parent='blur', condition="{parent}")], icon="RiEmotionHappyLine")

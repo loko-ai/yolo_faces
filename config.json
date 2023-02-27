@@ -1,7 +1,7 @@
 {
   "main": {
     "volumes": [
-       "/var/opt/loko/faces_tmp/.yoloface:/plugin/services/.yoloface"
+       "/var/opt/loko/yolo_faces/.yoloface:/plugin/services/.yoloface"
        ],
     "gui": {
       "name": "Faces detection"
