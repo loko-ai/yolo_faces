@@ -1,7 +1,7 @@
 [
  {
   "name": "Faces",
-  "description": "### Description\n**Faces** component detects and anonymizes human faces from images basing on YOLO.\n\n### Configuration\n\n- **threshold** sets the minimum score to detect a face.\n- **blur** allows to save the blurred results.\n- **file_path** sets the directory where to save the blurred results.\n\n### Input\nThe component accepts an image file in input.\n\n### Output\nThe output is the list of bounding boxes associated with scores of the detected faces:\n\n```\n{\n    \"label\": \"face\",\n    \"score\": 0.9896213412284851,\n    \"bbox\": [795,95,78,84]\n}\n```\n",
+  "description": "### Description\n**Faces** component detects and anonymizes human faces from images basing on YOLO.\n\n### Configuration\n\n- **threshold** sets the minimum score to detect a face.\n- **blur** allows to save the blurred results.\n- **file_path** sets the directory where to save the blurred results.\n\n### Input\nThe component accepts an image file in input.\n\n### Output\nThe output is the list of bounding boxes associated with scores of the detected faces:\n\n```\n{\n    \"label\": \"face\",\n    \"score\": 0.9896213412284851,\n    \"bbox\": [795,95,78,84]\n}\n```\nIf you've selected the **blur** parameter, you'll find the blurred images into the **file_path** folder. \n\n",
   "group": "Custom",
   "icon": "RiEmotionHappyLine",
   "click": null,

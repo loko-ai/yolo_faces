@@ -21,4 +21,6 @@ The output is the list of bounding boxes associated with scores of the detected 
     "bbox": [795,95,78,84]
 }
 ```
+If you've selected the **blur** parameter, you'll find the blurred images into the **file_path** folder. 
+
 '''
