@@ -3,7 +3,7 @@
   "id": "yolo_faces",
   "description": "",
   "created_on": "13/02/2023, 09:10:27",
-  "last_modify": "13/02/2023, 13:49:39",
+  "last_modify": "07/03/2023, 09:00:23",
   "graphs": {
     "main": {
       "nodes": [
@@ -226,78 +226,6 @@
           "positionAbsolute": {
             "x": 552,
             "y": 57
-          },
-          "__class__": "Node"
-        },
-        {
-          "id": "38bc4529-6e1b-49a5-9ac6-d8ac203e2308",
-          "position": {
-            "x": 444,
-            "y": 351
-          },
-          "type": "custom",
-          "dragHandle": "#nodeHandle",
-          "sourcePosition": "right",
-          "targetPosition": "left",
-          "width": 150,
-          "height": 56,
-          "selected": false,
-          "dragging": false,
-          "data": {
-            "name": "Route",
-            "events": null,
-            "description": "### Description\nThe ROUTE component is used to create a web server listening on a specific address and a specific HTTP method.\n\n### Input\nThe component has no input.\n\n### Output\nIn this case there is no fixed output format.",
-            "inputs": [],
-            "outputs": [
-              {
-                "id": "output",
-                "label": "output"
-              }
-            ],
-            "configured": true,
-            "options": {
-              "group": "HTTP",
-              "args": [
-                {
-                  "name": "comment",
-                  "type": "area",
-                  "label": "Node comment",
-                  "helper": "Use it to explain the usage of this node"
-                },
-                {
-                  "name": "alias",
-                  "type": "text",
-                  "label": "Name",
-                  "helper": "Use this name as an alias"
-                },
-                {
-                  "name": "debug",
-                  "type": "boolean",
-                  "label": "Debug to Console",
-                  "divider": true
-                },
-                {
-                  "name": "path",
-                  "type": "path",
-                  "helper": "Insert a path without '/' at start"
-                }
-              ],
-              "click": null,
-              "icon": "RiCloudyFill",
-              "values": {
-                "comment": "",
-                "alias": "",
-                "debug": false,
-                "path": "detect"
-              }
-            },
-            "locked": null
-          },
-          "selectable": true,
-          "draggable": true,
-          "positionAbsolute": {
-            "x": 444,
-            "y": 351
           },
           "__class__": "Node"
         },
@@ -672,62 +600,6 @@
           "data": {
             "startColor": "#F8637A",
             "stopColor": "#888"
-          },
-          "selected": false,
-          "dragging": false,
-          "__class__": "Edge"
-        },
-        {
-          "id": "reactflow__edge-38bc4529-6e1b-49a5-9ac6-d8ac203e2308output-5f272695-9286-4373-a31b-5e9d0b4c6a2dinput",
-          "source": "38bc4529-6e1b-49a5-9ac6-d8ac203e2308",
-          "sourceHandle": "output",
-          "target": "5f272695-9286-4373-a31b-5e9d0b4c6a2d",
-          "targetHandle": "input",
-          "data": {
-            "startColor": "#56A6DC",
-            "stopColor": "#D770AD"
-          },
-          "selected": false,
-          "dragging": false,
-          "__class__": "Edge"
-        },
-        {
-          "id": "reactflow__edge-5f272695-9286-4373-a31b-5e9d0b4c6a2doutput-7e0e554e-0ec2-48b6-95fb-47b0f270beecimage",
-          "source": "5f272695-9286-4373-a31b-5e9d0b4c6a2d",
-          "sourceHandle": "output",
-          "target": "7e0e554e-0ec2-48b6-95fb-47b0f270beec",
-          "targetHandle": "image",
-          "data": {
-            "startColor": "#D770AD",
-            "stopColor": "#888"
-          },
-          "selected": false,
-          "dragging": false,
-          "__class__": "Edge"
-        },
-        {
-          "id": "reactflow__edge-7e0e554e-0ec2-48b6-95fb-47b0f270beecoutput-97195a5b-58c2-48d6-b2cf-1e36dec7ad4cinput",
-          "source": "7e0e554e-0ec2-48b6-95fb-47b0f270beec",
-          "sourceHandle": "output",
-          "target": "97195a5b-58c2-48d6-b2cf-1e36dec7ad4c",
-          "targetHandle": "input",
-          "data": {
-            "startColor": "#888",
-            "stopColor": "#D770AD"
-          },
-          "selected": false,
-          "dragging": false,
-          "__class__": "Edge"
-        },
-        {
-          "id": "reactflow__edge-97195a5b-58c2-48d6-b2cf-1e36dec7ad4coutput-1e0491e0-1a26-48b5-8344-79d53b1caf89input",
-          "source": "97195a5b-58c2-48d6-b2cf-1e36dec7ad4c",
-          "sourceHandle": "output",
-          "target": "1e0491e0-1a26-48b5-8344-79d53b1caf89",
-          "targetHandle": "input",
-          "data": {
-            "startColor": "#D770AD",
-            "stopColor": "#56A6DC"
           },
           "selected": false,
           "dragging": false,

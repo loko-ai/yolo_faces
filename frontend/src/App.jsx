@@ -15,7 +15,6 @@ import { useEffect, useRef, useState } from "react";
 import { useObject } from "./hooks/state";
 
 const baseURL = import.meta.env.VITE_BASE_URL || "/";
-const detectURL = import.meta.env.VITE_DETECT_URL || "/";
 
 function MyImage({ src, bboxes }) {
   const canvasRef = useRef(null);
@@ -92,7 +91,7 @@ function App() {
       // };
       // reader.readAsDataURL(state.file);
       axios
-        .post(detectURL, form, {
+        .post(baseURL, form, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

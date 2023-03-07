@@ -10,8 +10,8 @@ FROM python:3.10-slim
 CMD echo "hello"
 EXPOSE 8080
 RUN apt-get update --fix-missing && apt-get install -y libgl1 libglib2.0-0 libsm6 libxrender1 libxext6
-ADD ./requirements.txt /
-RUN pip install -r /requirements.txt
+ADD ./requirements.lock /
+RUN pip install -r /requirements.lock
 ARG GATEWAY
 ENV GATEWAY=$GATEWAY
 ADD . /plugin

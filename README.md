@@ -5,7 +5,7 @@
 
 The "Faces detection" dashboard allows you to upload images and visualize the detected results:
 <p align="center">
-<img src="https://user-images.githubusercontent.com/30443495/221585086-bec83a53-cc57-4ad4-b5d8-7fb6bc3d3d9d.png" width="80%" />
+<img src="https://user-images.githubusercontent.com/30443495/223375832-c7630588-04b1-4b69-ab8b-19aeba678aea.png" width="80%" />
 </p>
 
 Basing on <a href="https://github.com/sthanhng/yoloface">yoloface</a> model, it detects faces bounding boxes associated with scores.
