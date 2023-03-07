@@ -4,7 +4,7 @@
        "/var/opt/loko/yolo_faces/.yoloface:/plugin/services/.yoloface"
        ],
     "gui": {
-      "name": "Faces detection"
+      "name": "Faces Detection"
     }
   }
 }

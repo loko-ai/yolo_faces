@@ -3,7 +3,7 @@
 
 **YOLO Faces** extension detects and anonymizes human faces from images.
 
-The "Faces detection" dashboard allows you to upload images and visualize the detected results:
+The "Faces Detection" dashboard allows you to upload images and visualize the detected results:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/30443495/223375832-c7630588-04b1-4b69-ab8b-19aeba678aea.png" width="80%" />
 </p>
@@ -35,7 +35,7 @@ In the file *config.json* you can choose where to mount the volume containing th
        "/var/opt/loko/yolo_faces/.yoloface:/plugin/services/.yoloface"
        ],
     "gui": {
-      "name": "Faces detection"
+      "name": "Faces Detection"
     }
   }
 }
