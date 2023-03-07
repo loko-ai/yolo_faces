@@ -5,7 +5,7 @@
 
 The "Faces Detection" dashboard allows you to upload images and visualize the detected results:
 <p align="center">
-<img src="https://user-images.githubusercontent.com/30443495/223375832-c7630588-04b1-4b69-ab8b-19aeba678aea.png" width="80%" />
+<img src="https://user-images.githubusercontent.com/30443495/223385026-3be3f789-099a-488a-9e51-13983b15563b.png" width="80%" />
 </p>
 
 Basing on <a href="https://github.com/sthanhng/yoloface">yoloface</a> model, it detects faces bounding boxes associated with scores.
@@ -22,7 +22,7 @@ the anonymized images (you have to tick **blur** first):
 
 If you open your previous selected folder, you'll find the blurred images:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/30443495/221593482-13c2be71-622a-4e3a-920e-ec3a36d81cf8.png" width="80%" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/30443495/223385686-5b477d3e-9b25-45fe-bcaf-6ba64b40b2dc.png" width="80%" /></p>
 
 ## Configuration
 
